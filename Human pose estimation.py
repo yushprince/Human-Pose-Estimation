@@ -119,10 +119,10 @@ if not cap.isOpened():
     cap = cv.VideoCapture(0)
 if not cap.isOpened():
     raise IOError("cannot open video") 
-while cv.Waitkey(1) < 0:
+while cv.WaitKey(1) < 0:
     hasFrame,frame=cap.read()
     if not hasFrame:
-        cv.waitkey()
+        cv.waitKey()
         break 
     frameWidth = frame.shape[1]
     frameHeight = frame.shape[0]
